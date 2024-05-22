@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sidebar Example</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  transition: filter 0.3s ease;
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+.content {
+  text-align: center;
+}
+
+.open-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+  transition: left 0.3s ease;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+}
+
+</style>
+<body>
+
+<div class="container">
+  <div class="content">
+    <h1>Welcome to My Page</h1>
+    <p>This is some content on the page.</p>
+    <p>Click the button to open the sidebar.</p>
+  </div>
+
+  <button class="open-btn" onclick="toggleSidebar()">☰ Open Sidebar</button>
+
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">×</button>
+    <h2>Sidebar</h2>
+    <p>This is the sidebar content.</p>
+  </div>
+</div>
+
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const container = document.querySelector('.container');
+    sidebar.classList.toggle('open');
+    container.classList.toggle('blur');
+  }
+</script>
+
+</body>
+</html>
