@@ -32,7 +32,7 @@
 }
 
 .location .icon {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .header .select {
@@ -103,6 +103,7 @@
   text-decoration: none;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5vh;
   /* border: 2px solid white; */
   padding: 5px;
 
@@ -270,12 +271,13 @@
 .parent {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  /* border: 1px solid red; */
+  padding-top: 100px;
 }
 
 .parent .box {
-  margin-top: 50px;
-  margin-top: 50px;
+
   width: 300px;
   height: auto;
   padding: 20px;
@@ -291,7 +293,7 @@
   font-size: 17px;
   font-weight: 700;
   color: white;
-  /* width: 300px; */
+  
 
 }
 
@@ -332,7 +334,7 @@
 }
 
 .select-op {
-  
+
   display: flex;
 }
 
@@ -416,16 +418,6 @@
   width: auto;
 }
 
-.location p {
-  font-size: 12px;
-  color: rgb(206, 202, 202);
-  margin-left: 13px;
-}
-
-.location .icon {
-  font-size: 16px;
-}
-
 .header-mobile .select {
   height: 42px;
   width: auto;
@@ -434,25 +426,6 @@
   background-color: #b9c4c5;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
-}
-
-
-.lang {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 5px;
-}
-
-.EN {
-  background-color: transparent;
-  color: white;
-  font-weight: bolder;
-}
-
-.account {
-  display: flex;
-  flex-direction: column;
 }
 
 .search-section-mobile {
@@ -510,7 +483,7 @@
   overflow: scroll;
   backdrop-filter: blur(100px);
   z-index: 1;
-  
+
 }
 
 .sidebar .user {
@@ -568,24 +541,50 @@
 /* SIDE BAR CSS END HERE */
 
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .header-mobile {
     display: flex;
+
+  }
+
+  .header-mobile .mobile-top {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 32px;
+    padding-right: 20px;
+
   }
 
   .header {
     display: none;
   }
-  .second-header{
+
+  .second-header {
     gap: 0.1em;
   }
-  .second-header a{
+
+  .second-header a {
     font-size: 13px;
 
   }
-  .thirdpanel{
+
+  .thirdpanel {
     align-items: center;
     justify-content: center;
+  }
+
+  .parent {
+
+    padding-top: 10px;
+  }
+
+
+}
+
+@media screen and (max-width: 450px) {
+  .second-header a {
+
+    font-size: 10px;
   }
 
 }
