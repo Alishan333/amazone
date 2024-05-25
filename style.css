@@ -17,7 +17,7 @@
 
 .header .logo {
   width: auto;
-  height: 40px;
+  height: 60%;
 }
 
 .header .logo img {
@@ -336,6 +336,7 @@
 .select-op {
 
   display: flex;
+  flex-wrap: wrap;
 }
 
 .select-op select {
@@ -353,7 +354,7 @@
 .second {
   background-color: #131A22;
   width: 100%;
-  height: 100px;
+  height: auto;
   color: white;
   display: flex;
   flex-wrap: wrap;
@@ -365,7 +366,8 @@
 .second .a-tags {
   width: auto;
   height: auto;
-  /* border: 2px solid white; */
+  margin-top: 15px;
+    /* border: 2px solid white; */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -374,8 +376,19 @@
 }
 
 .second .a-tags a,
-.second,
-.copy {
+.second{
+  /* border: 1px solid red; */
+  text-decoration: none;
+  color: #DDD;
+  font-size: 13px;
+  line-height: 15px;
+  padding: 3px 5px;
+  font-weight: 500;
+}
+.copy{
+  display: flex;
+  margin-bottom: 15px;
+
   /* border: 1px solid red; */
   text-decoration: none;
   color: #DDD;
@@ -581,7 +594,19 @@
 
 }
 
-@media screen and (max-width: 450px) {
+@media (max-width: 1050px) {
+  .lang , .EN{
+    display: none;
+  }
+  }
+@media (max-width: 860px) {
+  .R-O{
+    display: none;
+  }
+  
+
+}
+@media (max-width: 450px) {
   .second-header a {
 
     font-size: 10px;
